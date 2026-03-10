@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="dark">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🍀 럭키 로또 - 행운의 번호 추천</title>
-    <meta name="description" content="클릭 한 번으로 행운의 로또 번호 6개를 추천받으세요! 무작위 번호 생성기로 당신만의 행운 번호를 찾아보세요." />
+    <meta name="description" content="클릭 한 번으로 5게임의 행운의 로또 번호를 추천받으세요!" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
@@ -19,27 +19,114 @@
             padding: 0;
         }
 
+        /* ===== 다크 모드 (기본) ===== */
         :root {
+            --bg: #0D0B1F;
+            --bg-secondary: #1A1535;
             --gold: #FFD700;
-            --gold-light: #FFF0A0;
-            --purple-deep: #0D0B1F;
-            --purple-mid: #1A1535;
-            --purple-light: #2D2660;
             --accent: #A855F7;
             --accent2: #EC4899;
             --text: #F0E6FF;
             --text-muted: #9B8EC4;
-            --ball-red: #FF4B6E;
-            --ball-orange: #FF8C42;
-            --ball-yellow: #FFD166;
-            --ball-green: #06D6A0;
-            --ball-blue: #4CC9F0;
-            --ball-purple: #A855F7;
+
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --card-inset: rgba(255, 255, 255, 0.05);
+            --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+
+            --row-bg: rgba(255, 255, 255, 0.03);
+            --row-bg-hover: rgba(255, 255, 255, 0.07);
+            --row-border: rgba(255, 255, 255, 0.07);
+            --row-border-hover: rgba(168, 85, 247, 0.35);
+
+            --stat-bg: rgba(255, 255, 255, 0.04);
+            --stat-border: rgba(255, 255, 255, 0.08);
+
+            --round-hd-bg: rgba(255, 255, 255, 0.04);
+            --round-hd-border: rgba(255, 255, 255, 0.06);
+            --round-block-bg: rgba(255, 255, 255, 0.03);
+            --round-block-border: rgba(255, 255, 255, 0.08);
+
+            --setitem-hover: rgba(255, 255, 255, 0.04);
+            --divider: rgba(255, 255, 255, 0.1);
+
+            --btn-clear-bg: rgba(255, 255, 255, 0.06);
+            --btn-clear-border: rgba(255, 255, 255, 0.12);
+            --btn-clear-hover: rgba(255, 255, 255, 0.1);
+            --btn-clear-border-hover: rgba(255, 255, 255, 0.2);
+
+            --copy-border: rgba(255, 255, 255, 0.13);
+            --badge-bg: rgba(255, 215, 0, 0.1);
+            --badge-border: rgba(255, 215, 0, 0.3);
+
+            --placeholder-op: 0.35;
+            --star-color: 255, 255, 255;
+            --orb1-color: rgba(168, 85, 247, 0.3);
+            --orb2-color: rgba(236, 72, 153, 0.25);
+            --orb3-color: rgba(76, 201, 240, 0.2);
+
+            --toggle-bg: rgba(255, 255, 255, 0.1);
+            --toggle-border: rgba(255, 255, 255, 0.2);
+            --toggle-hover: rgba(255, 255, 255, 0.18);
+            --scrollbar-thumb: rgba(168, 85, 247, 0.4);
         }
 
+        /* ===== 라이트 모드 ===== */
+        [data-theme="light"] {
+            --bg: #EEE9F9;
+            --bg-secondary: #E0D7F5;
+            --gold: #B07800;
+            --accent: #7C3AED;
+            --accent2: #DB2777;
+            --text: #1E1340;
+            --text-muted: #6B5B9A;
+
+            --card-bg: rgba(255, 255, 255, 0.78);
+            --card-border: rgba(124, 58, 237, 0.12);
+            --card-inset: rgba(255, 255, 255, 0.9);
+            --card-shadow: 0 20px 50px rgba(100, 60, 200, 0.12);
+
+            --row-bg: rgba(255, 255, 255, 0.6);
+            --row-bg-hover: rgba(255, 255, 255, 0.95);
+            --row-border: rgba(124, 58, 237, 0.1);
+            --row-border-hover: rgba(124, 58, 237, 0.35);
+
+            --stat-bg: rgba(255, 255, 255, 0.6);
+            --stat-border: rgba(124, 58, 237, 0.1);
+
+            --round-hd-bg: rgba(124, 58, 237, 0.05);
+            --round-hd-border: rgba(124, 58, 237, 0.08);
+            --round-block-bg: rgba(255, 255, 255, 0.5);
+            --round-block-border: rgba(124, 58, 237, 0.1);
+
+            --setitem-hover: rgba(124, 58, 237, 0.05);
+            --divider: rgba(0, 0, 0, 0.08);
+
+            --btn-clear-bg: rgba(0, 0, 0, 0.05);
+            --btn-clear-border: rgba(0, 0, 0, 0.1);
+            --btn-clear-hover: rgba(0, 0, 0, 0.09);
+            --btn-clear-border-hover: rgba(0, 0, 0, 0.2);
+
+            --copy-border: rgba(0, 0, 0, 0.12);
+            --badge-bg: rgba(176, 120, 0, 0.1);
+            --badge-border: rgba(176, 120, 0, 0.3);
+
+            --placeholder-op: 0.25;
+            --star-color: 124, 58, 237;
+            --orb1-color: rgba(168, 85, 247, 0.15);
+            --orb2-color: rgba(236, 72, 153, 0.12);
+            --orb3-color: rgba(76, 201, 240, 0.1);
+
+            --toggle-bg: rgba(0, 0, 0, 0.07);
+            --toggle-border: rgba(0, 0, 0, 0.12);
+            --toggle-hover: rgba(124, 58, 237, 0.1);
+            --scrollbar-thumb: rgba(124, 58, 237, 0.3);
+        }
+
+        /* ===== 전역 ===== */
         body {
             font-family: 'Outfit', sans-serif;
-            background: var(--purple-deep);
+            background: var(--bg);
             color: var(--text);
             min-height: 100vh;
             display: flex;
@@ -48,9 +135,10 @@
             justify-content: center;
             overflow-x: hidden;
             position: relative;
+            transition: background 0.4s ease, color 0.4s ease;
         }
 
-        /* 배경 星 파티클 */
+        /* ===== 배경 요소 ===== */
         .bg-stars {
             position: fixed;
             inset: 0;
@@ -62,9 +150,10 @@
         .star {
             position: absolute;
             border-radius: 50%;
-            background: white;
+            background: rgb(var(--star-color));
             animation: twinkle var(--dur, 3s) ease-in-out infinite;
             opacity: 0;
+            transition: background 0.4s;
         }
 
         @keyframes twinkle {
@@ -81,19 +170,19 @@
             }
         }
 
-        /* 배경 Glow orbs */
         .orb {
             position: fixed;
             border-radius: 50%;
             filter: blur(100px);
             z-index: 0;
             pointer-events: none;
+            transition: background 0.5s;
         }
 
         .orb-1 {
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.3), transparent 70%);
+            background: var(--orb1-color);
             top: -150px;
             left: -150px;
             animation: floatOrb 8s ease-in-out infinite;
@@ -102,7 +191,7 @@
         .orb-2 {
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle, rgba(236, 72, 153, 0.25), transparent 70%);
+            background: var(--orb2-color);
             bottom: -100px;
             right: -100px;
             animation: floatOrb 10s ease-in-out infinite reverse;
@@ -111,7 +200,7 @@
         .orb-3 {
             width: 300px;
             height: 300px;
-            background: radial-gradient(circle, rgba(76, 201, 240, 0.2), transparent 70%);
+            background: var(--orb3-color);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -134,7 +223,37 @@
             }
         }
 
-        /* 메인 컨테이너 */
+        /* ===== 테마 토글 버튼 ===== */
+        .theme-toggle {
+            position: fixed;
+            top: 1.2rem;
+            right: 1.2rem;
+            z-index: 100;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 1px solid var(--toggle-border);
+            background: var(--toggle-bg);
+            backdrop-filter: blur(12px);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: background 0.2s, transform 0.3s, border-color 0.3s;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .theme-toggle:hover {
+            background: var(--toggle-hover);
+            transform: rotate(20deg) scale(1.1);
+        }
+
+        .theme-toggle:active {
+            transform: scale(0.9);
+        }
+
+        /* ===== 레이아웃 ===== */
         .container {
             position: relative;
             z-index: 1;
@@ -147,7 +266,7 @@
             gap: 2.5rem;
         }
 
-        /* 헤더 */
+        /* ===== 헤더 ===== */
         .header {
             text-align: center;
         }
@@ -159,11 +278,12 @@
             letter-spacing: 0.15em;
             text-transform: uppercase;
             color: var(--gold);
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            background: var(--badge-bg);
+            border: 1px solid var(--badge-border);
             border-radius: 999px;
             padding: 0.3rem 1rem;
             margin-bottom: 1rem;
+            transition: background 0.3s, border-color 0.3s, color 0.3s;
         }
 
         .header h1 {
@@ -182,22 +302,29 @@
             color: var(--text-muted);
             font-weight: 300;
             line-height: 1.6;
+            transition: color 0.3s;
         }
 
-        /* 카드 */
+        .header p strong {
+            color: var(--gold);
+            transition: color 0.3s;
+        }
+
+        /* ===== 카드 ===== */
         .card {
             width: 100%;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
             border-radius: 28px;
             padding: 2rem 1.75rem;
             backdrop-filter: blur(20px);
             box-shadow:
-                0 0 0 1px rgba(255, 255, 255, 0.05) inset,
-                0 20px 60px rgba(0, 0, 0, 0.4);
+                0 0 0 1px var(--card-inset) inset,
+                var(--card-shadow);
+            transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
         }
 
-        /* 5게임 영역 */
+        /* ===== 5게임 그리드 ===== */
         .games-wrapper {
             width: 100%;
         }
@@ -213,7 +340,8 @@
 
         .games-placeholder .icon {
             font-size: 3rem;
-            opacity: 0.4;
+            opacity: var(--placeholder-op);
+            transition: opacity 0.3s;
         }
 
         .games-placeholder p {
@@ -231,8 +359,8 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.07);
+            background: var(--row-bg);
+            border: 1px solid var(--row-border);
             border-radius: 16px;
             padding: 0.9rem 1rem;
             animation: gameRowIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
@@ -240,8 +368,8 @@
         }
 
         .game-row:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(168, 85, 247, 0.3);
+            background: var(--row-bg-hover);
+            border-color: var(--row-border-hover);
         }
 
         @keyframes gameRowIn {
@@ -264,6 +392,7 @@
             min-width: 32px;
             text-align: center;
             flex-shrink: 0;
+            transition: color 0.3s;
         }
 
         .game-balls {
@@ -273,40 +402,7 @@
             flex-wrap: wrap;
         }
 
-        .game-copy-btn {
-            background: none;
-            border: 1px solid rgba(255, 255, 255, 0.13);
-            color: var(--text-muted);
-            border-radius: 8px;
-            padding: 0.28rem 0.55rem;
-            font-size: 0.68rem;
-            font-family: 'Outfit', sans-serif;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-
-        .game-copy-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            background: rgba(168, 85, 247, 0.1);
-        }
-
-        .game-copy-btn.copied {
-            border-color: #06D6A0;
-            color: #06D6A0;
-            background: rgba(6, 214, 160, 0.1);
-        }
-
-        .balls-container {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-
+        /* ===== 볼 ===== */
         .ball {
             width: 52px;
             height: 52px;
@@ -323,9 +419,9 @@
             animation: ballPop 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
             box-shadow:
-                0 6px 16px rgba(0, 0, 0, 0.35),
+                0 6px 16px rgba(0, 0, 0, 0.3),
                 0 0 0 2px rgba(255, 255, 255, 0.15) inset,
-                0 -2px 0 rgba(0, 0, 0, 0.25) inset;
+                0 -2px 0 rgba(0, 0, 0, 0.2) inset;
         }
 
         .ball::before {
@@ -360,7 +456,6 @@
             }
         }
 
-        /* 볼 색상 (1-10: red, 11-20: orange, 21-30: yellow, 31-40: blue/green, 41-45: purple) */
         .ball.range-1 {
             background: linear-gradient(145deg, #FF6B8A, #E53E3E);
         }
@@ -381,15 +476,201 @@
             background: linear-gradient(145deg, #C084FC, #7E22CE);
         }
 
-        /* 구분선 */
+        /* ===== 미니볼 ===== */
+        .mini-ball {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.62rem;
+            font-weight: 800;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .mini-ball::before {
+            content: '';
+            position: absolute;
+            top: 15%;
+            left: 22%;
+            width: 30%;
+            height: 20%;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            filter: blur(2px);
+        }
+
+        .mini-ball.range-1 {
+            background: linear-gradient(145deg, #FF6B8A, #E53E3E);
+        }
+
+        .mini-ball.range-2 {
+            background: linear-gradient(145deg, #FFA45C, #E8711A);
+        }
+
+        .mini-ball.range-3 {
+            background: linear-gradient(145deg, #FFE066, #D4A017);
+        }
+
+        .mini-ball.range-4 {
+            background: linear-gradient(145deg, #5CF0CE, #0EA47E);
+        }
+
+        .mini-ball.range-5 {
+            background: linear-gradient(145deg, #C084FC, #7E22CE);
+        }
+
+        /* ===== 복사 버튼 공통 ===== */
+        .game-copy-btn,
+        .copy-btn {
+            background: none;
+            border: 1px solid var(--copy-border);
+            color: var(--text-muted);
+            border-radius: 8px;
+            padding: 0.28rem 0.55rem;
+            font-size: 0.68rem;
+            font-family: 'Outfit', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .copy-btn {
+            border-radius: 6px;
+            padding: 0.22rem 0.45rem;
+            font-size: 0.62rem;
+        }
+
+        .game-copy-btn:hover,
+        .copy-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(168, 85, 247, 0.1);
+        }
+
+        .game-copy-btn.copied,
+        .copy-btn.copied {
+            border-color: #06D6A0;
+            color: #06D6A0;
+            background: rgba(6, 214, 160, 0.1);
+        }
+
+        /* ===== 구분선 ===== */
         .divider {
             width: 100%;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            margin: 0.5rem 0;
+            background: linear-gradient(90deg, transparent, var(--divider), transparent);
+            margin: 1rem 0;
+            transition: background 0.3s;
         }
 
-        /* 세트 목록 */
+        /* ===== 버튼 영역 ===== */
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .btn-generate {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.1rem 2rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1A0A00;
+            background: linear-gradient(135deg, #FFD700 0%, #FF8C42 50%, #FF4B6E 100%);
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 8px 30px rgba(255, 107, 107, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+        }
+
+        .btn-generate::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), transparent 60%);
+            pointer-events: none;
+        }
+
+        .btn-generate:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+        }
+
+        .btn-generate:active {
+            transform: translateY(0);
+        }
+
+        .btn-clear {
+            padding: 1.1rem 1.5rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: var(--btn-clear-bg);
+            border: 1px solid var(--btn-clear-border);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-clear:hover {
+            background: var(--btn-clear-hover);
+            color: var(--text);
+            border-color: var(--btn-clear-border-hover);
+            transform: translateY(-2px);
+        }
+
+        /* ===== 통계 ===== */
+        .stats {
+            display: flex;
+            gap: 0.75rem;
+            width: 100%;
+        }
+
+        .stat-box {
+            flex: 1;
+            background: var(--stat-bg);
+            border: 1px solid var(--stat-border);
+            border-radius: 14px;
+            padding: 0.85rem 0.5rem;
+            text-align: center;
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        .stat-val {
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--gold), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-top: 0.3rem;
+            letter-spacing: 0.04em;
+            transition: color 0.3s;
+        }
+
+        /* ===== 이력 섹션 ===== */
         .sets-section {
             width: 100%;
         }
@@ -401,6 +682,7 @@
             text-transform: uppercase;
             color: var(--text-muted);
             margin-bottom: 1rem;
+            transition: color 0.3s;
         }
 
         .sets-list {
@@ -421,17 +703,29 @@
         }
 
         .sets-list::-webkit-scrollbar-thumb {
-            background: rgba(168, 85, 247, 0.4);
+            background: var(--scrollbar-thumb);
             border-radius: 2px;
         }
 
-        /* 회차 묶음 */
         .round-block {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: var(--round-block-bg);
+            border: 1px solid var(--round-block-border);
             border-radius: 16px;
             overflow: hidden;
             animation: slideIn 0.4s ease both;
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .round-header {
@@ -439,8 +733,9 @@
             align-items: center;
             justify-content: space-between;
             padding: 0.6rem 0.9rem;
-            background: rgba(255, 255, 255, 0.04);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            background: var(--round-hd-bg);
+            border-bottom: 1px solid var(--round-hd-border);
+            transition: background 0.3s, border-color 0.3s;
         }
 
         .round-label {
@@ -448,23 +743,24 @@
             font-weight: 700;
             color: var(--gold);
             letter-spacing: 0.08em;
+            transition: color 0.3s;
         }
 
         .round-copy-all {
             background: none;
-            border: 1px solid rgba(255, 215, 0, 0.25);
-            color: rgba(255, 215, 0, 0.7);
+            border: 1px solid rgba(var(--gold-rgb, 255, 215, 0), 0.25);
+            color: var(--gold);
             border-radius: 6px;
             padding: 0.2rem 0.5rem;
             font-size: 0.65rem;
             font-family: 'Outfit', sans-serif;
             cursor: pointer;
+            opacity: 0.7;
             transition: all 0.2s;
         }
 
         .round-copy-all:hover {
-            border-color: var(--gold);
-            color: var(--gold);
+            opacity: 1;
             background: rgba(255, 215, 0, 0.08);
         }
 
@@ -485,19 +781,7 @@
         }
 
         .set-item:hover {
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            background: var(--setitem-hover);
         }
 
         .set-index {
@@ -506,6 +790,7 @@
             color: var(--text-muted);
             min-width: 22px;
             text-align: center;
+            transition: color 0.3s;
         }
 
         .mini-balls {
@@ -515,198 +800,31 @@
             flex-wrap: wrap;
         }
 
-        .mini-ball {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.62rem;
-            font-weight: 800;
-            color: white;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        .mini-ball::before {
-            content: '';
-            position: absolute;
-            top: 15%;
-            left: 22%;
-            width: 30%;
-            height: 20%;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            filter: blur(2px);
-        }
-
-        .copy-btn {
-            background: none;
-            border: 1px solid rgba(255, 255, 255, 0.13);
-            color: var(--text-muted);
-            border-radius: 6px;
-            padding: 0.22rem 0.45rem;
-            font-size: 0.62rem;
-            font-family: 'Outfit', sans-serif;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-
-        .copy-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            background: rgba(168, 85, 247, 0.1);
-        }
-
-        .copy-btn.copied {
-            border-color: #06D6A0;
-            color: #06D6A0;
-            background: rgba(6, 214, 160, 0.1);
-        }
-
-        /* 버튼 영역 */
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            width: 100%;
-            flex-wrap: wrap;
-        }
-
-        .btn-generate {
-            flex: 1;
-            min-width: 200px;
-            padding: 1.1rem 2rem;
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--purple-deep);
-            background: linear-gradient(135deg, #FFD700 0%, #FF8C42 50%, #FF4B6E 100%);
-            border: none;
-            border-radius: 16px;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 8px 30px rgba(255, 107, 107, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
-        }
-
-        .btn-generate::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent 60%);
-            pointer-events: none;
-        }
-
-        .btn-generate::after {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            background: linear-gradient(135deg, #FFD700, #FF4B6E, #A855F7);
-            border-radius: 18px;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .btn-generate:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
-        }
-
-        .btn-generate:hover::after {
-            opacity: 1;
-        }
-
-        .btn-generate:active {
-            transform: translateY(0px);
-        }
-
-        .btn-generate .btn-icon {
-            margin-right: 0.5rem;
-        }
-
-        .btn-clear {
-            padding: 1.1rem 1.5rem;
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 16px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .btn-clear:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* 통계 */
-        .stats {
-            display: flex;
-            gap: 0.75rem;
-            width: 100%;
-        }
-
-        .stat-box {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
-            padding: 0.85rem 0.5rem;
-            text-align: center;
-        }
-
-        .stat-val {
-            font-size: 1.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--gold), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.68rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            margin-top: 0.3rem;
-            letter-spacing: 0.04em;
-        }
-
-        /* 당첨 확률 */
+        /* ===== 당첨 확률 / 푸터 ===== */
         .probability {
             text-align: center;
             font-size: 0.8rem;
             color: var(--text-muted);
             font-weight: 300;
+            transition: color 0.3s;
         }
 
         .probability strong {
             color: var(--gold);
             font-weight: 600;
+            transition: color 0.3s;
         }
 
-        /* 푸터 */
         .footer {
             text-align: center;
             font-size: 0.75rem;
-            color: rgba(155, 142, 196, 0.5);
+            color: var(--text-muted);
+            opacity: 0.55;
             line-height: 1.6;
+            transition: color 0.3s;
         }
 
-        /* 토스트 */
+        /* ===== 토스트 ===== */
         .toast {
             position: fixed;
             bottom: 2rem;
@@ -721,7 +839,7 @@
             font-weight: 600;
             backdrop-filter: blur(10px);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 100;
+            z-index: 200;
             pointer-events: none;
         }
 
@@ -729,7 +847,7 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* 반응형 */
+        /* ===== 반응형 ===== */
         @media (max-width: 540px) {
             .ball {
                 width: 42px;
@@ -756,11 +874,22 @@
             .game-row {
                 padding: 0.65rem 0.75rem;
             }
+
+            .theme-toggle {
+                top: 0.8rem;
+                right: 0.8rem;
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 
 <body>
+
+    <!-- 테마 토글 -->
+    <button class="theme-toggle" id="themeToggle" title="테마 변경" onclick="toggleTheme()">🌙</button>
 
     <!-- 배경 -->
     <div class="bg-stars" id="bgStars"></div>
@@ -773,7 +902,7 @@
         <header class="header">
             <div class="badge">🍀 Lucky Number Generator</div>
             <h1>행운의 로또<br />번호 추천</h1>
-            <p>버튼을 누르면 <strong style="color:var(--gold)">5게임</strong>을 한꺼번에 추천해드립니다</p>
+            <p>버튼을 누르면 <strong>5게임</strong>을 한꺼번에 추천해드립니다</p>
         </header>
 
         <!-- 메인 카드 -->
@@ -787,14 +916,14 @@
                 <div class="games-grid" id="gamesGrid" style="display:none;"></div>
             </div>
 
-            <div class="divider" style="margin: 1rem 0;"></div>
+            <div class="divider"></div>
 
             <!-- 버튼 -->
-            <div class="btn-group" style="margin-bottom: 1rem;">
+            <div class="btn-group">
                 <button class="btn-generate" id="generateBtn" onclick="generateNumbers()">
-                    <span class="btn-icon">✨</span> 5게임 추천받기
+                    <span>✨</span> 5게임 추천받기
                 </button>
-                <button class="btn-clear" id="clearBtn" onclick="clearAll()">초기화</button>
+                <button class="btn-clear" onclick="clearAll()">초기화</button>
             </div>
 
             <!-- 통계 -->
@@ -814,7 +943,7 @@
             </div>
         </div>
 
-        <!-- 이전 세트 -->
+        <!-- 이력 -->
         <div class="sets-section" id="setsSection" style="display:none;">
             <div class="sets-title">📋 추천 이력 (회차별 5게임)</div>
             <div class="sets-list" id="setsList"></div>
@@ -832,45 +961,68 @@
         </footer>
     </div>
 
-    <!-- 복사 토스트 -->
+    <!-- 토스트 -->
     <div class="toast" id="toast">✅ 번호가 복사되었습니다!</div>
 
     <script>
-        // ——— 별 배경 생성 ———
+        /* ──────────────────────────────
+           테마 토글
+        ────────────────────────────── */
+        const THEME_KEY = 'lotto-theme';
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            document.getElementById('themeToggle').textContent = theme === 'dark' ? '🌙' : '☀️';
+            localStorage.setItem(THEME_KEY, theme);
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            applyTheme(current === 'dark' ? 'light' : 'dark');
+        }
+
+        // 저장된 테마 복원
+        (function initTheme() {
+            const saved = localStorage.getItem(THEME_KEY);
+            const preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            applyTheme(saved || preferred);
+        })();
+
+        /* ──────────────────────────────
+           별 배경
+        ────────────────────────────── */
         (function createStars() {
             const container = document.getElementById('bgStars');
             for (let i = 0; i < 120; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 const size = Math.random() * 2.5 + 0.5;
-                const dur = (Math.random() * 4 + 2).toFixed(1);
-                const delay = (Math.random() * 6).toFixed(1);
-                const op = (Math.random() * 0.6 + 0.2).toFixed(2);
                 star.style.cssText = `
-          width:${size}px; height:${size}px;
-          top:${Math.random() * 100}%; left:${Math.random() * 100}%;
-          --dur:${dur}s; --op:${op};
-          animation-delay:${delay}s;
+          width:${size}px;height:${size}px;
+          top:${Math.random() * 100}%;left:${Math.random() * 100}%;
+          --dur:${(Math.random() * 4 + 2).toFixed(1)}s;
+          --op:${(Math.random() * 0.6 + 0.2).toFixed(2)};
+          animation-delay:${(Math.random() * 6).toFixed(1)}s;
         `;
                 container.appendChild(star);
             }
         })();
 
-        // ——— 상태 ———
+        /* ──────────────────────────────
+           로또 로직
+        ────────────────────────────── */
         const GAMES_PER_ROUND = 5;
         let roundCount = 0;
-        let history = []; // 각 원소 = 5게임 배열
+        let history = [];
 
-        // ——— 볼 색상 결정 ———
-        function getBallRange(num) {
-            if (num <= 10) return 'range-1';
-            if (num <= 20) return 'range-2';
-            if (num <= 30) return 'range-3';
-            if (num <= 40) return 'range-4';
+        function getBallRange(n) {
+            if (n <= 10) return 'range-1';
+            if (n <= 20) return 'range-2';
+            if (n <= 30) return 'range-3';
+            if (n <= 40) return 'range-4';
             return 'range-5';
         }
 
-        // ——— 로또 번호 1세트 생성 ———
         function generateLottoNumbers() {
             const pool = Array.from({ length: 45 }, (_, i) => i + 1);
             const result = [];
@@ -881,7 +1033,6 @@
             return result.sort((a, b) => a - b);
         }
 
-        // ——— 볼 엘리먼트 생성 (className: ball or mini-ball) ———
         function createBallEl(num, cls, delay = 0) {
             const ball = document.createElement('div');
             ball.className = `${cls} ${getBallRange(num)}`;
@@ -890,7 +1041,6 @@
             return ball;
         }
 
-        // ——— 복사 버튼 공용 헬퍼 ———
         function makeCopyBtn(numbers, label = '복사', cls = 'game-copy-btn') {
             const btn = document.createElement('button');
             btn.className = cls;
@@ -899,41 +1049,30 @@
             return btn;
         }
 
-        // ——— 메인 5게임 표시 ———
         function renderMainGames(games) {
             const grid = document.getElementById('gamesGrid');
             grid.style.display = 'flex';
             document.getElementById('placeholder').style.display = 'none';
             grid.innerHTML = '';
-
             games.forEach((numbers, gi) => {
                 const row = document.createElement('div');
                 row.className = 'game-row';
                 row.style.animationDelay = `${gi * 0.08}s`;
-
                 const label = document.createElement('div');
                 label.className = 'game-label';
                 label.textContent = `G${gi + 1}`;
-
                 const ballsWrap = document.createElement('div');
                 ballsWrap.className = 'game-balls';
-                numbers.forEach((num, bi) => {
-                    ballsWrap.appendChild(createBallEl(num, 'ball', gi * 0.08 + bi * 0.07));
-                });
-
-                const copyBtn = makeCopyBtn(numbers);
-
+                numbers.forEach((num, bi) => ballsWrap.appendChild(createBallEl(num, 'ball', gi * 0.08 + bi * 0.07)));
                 row.appendChild(label);
                 row.appendChild(ballsWrap);
-                row.appendChild(copyBtn);
+                row.appendChild(makeCopyBtn(numbers));
                 grid.appendChild(row);
             });
         }
 
-        // ——— 통계 업데이트 ———
         function updateStats() {
             const totalGames = roundCount * GAMES_PER_ROUND;
-            // 마지막 회차 평균 계산
             let avgVal = '—';
             if (history.length > 0) {
                 const allNums = history[0].flat();
@@ -944,22 +1083,17 @@
             document.getElementById('statAvg').textContent = avgVal;
         }
 
-        // ——— 이력 회차 블록 렌더 ———
         function addHistoryRound(games, round) {
             const list = document.getElementById('setsList');
-            const section = document.getElementById('setsSection');
-            section.style.display = 'block';
-
+            document.getElementById('setsSection').style.display = 'block';
             const block = document.createElement('div');
             block.className = 'round-block';
 
-            // 헤더
             const header = document.createElement('div');
             header.className = 'round-header';
             const lbl = document.createElement('div');
             lbl.className = 'round-label';
             lbl.textContent = `✦ ${round}회차 추천`;
-            const allNums = games.flat();
             const copyAllBtn = document.createElement('button');
             copyAllBtn.className = 'round-copy-all';
             copyAllBtn.textContent = '전체 복사';
@@ -970,48 +1104,36 @@
             header.appendChild(lbl);
             header.appendChild(copyAllBtn);
 
-            // 게임 목록
             const gamesDiv = document.createElement('div');
             gamesDiv.className = 'round-games';
             games.forEach((numbers, gi) => {
                 const item = document.createElement('div');
                 item.className = 'set-item';
-
                 const idx = document.createElement('div');
                 idx.className = 'set-index';
                 idx.textContent = `G${gi + 1}`;
-
                 const miniBalls = document.createElement('div');
                 miniBalls.className = 'mini-balls';
                 numbers.forEach(num => miniBalls.appendChild(createBallEl(num, 'mini-ball')));
-
-                const copyBtn = makeCopyBtn(numbers, '복사', 'copy-btn');
-
                 item.appendChild(idx);
                 item.appendChild(miniBalls);
-                item.appendChild(copyBtn);
+                item.appendChild(makeCopyBtn(numbers, '복사', 'copy-btn'));
                 gamesDiv.appendChild(item);
             });
-
             block.appendChild(header);
             block.appendChild(gamesDiv);
             list.insertBefore(block, list.firstChild);
         }
 
-        // ——— 번호 복사 공통 ———
         function copyText(text, btn, doneLabel, origLabel) {
             navigator.clipboard.writeText(text).then(() => {
-                if (btn) {
-                    btn.textContent = doneLabel;
-                    setTimeout(() => { btn.textContent = origLabel; }, 2000);
-                }
+                if (btn) { btn.textContent = doneLabel; setTimeout(() => { btn.textContent = origLabel; }, 2000); }
                 showToast();
             }).catch(() => {
                 const ta = document.createElement('textarea');
                 ta.value = text; document.body.appendChild(ta);
                 ta.select(); document.execCommand('copy');
-                document.body.removeChild(ta);
-                showToast();
+                document.body.removeChild(ta); showToast();
             });
         }
 
@@ -1019,38 +1141,31 @@
             copyText(numbers.join(', '), btn, '✓ 복사됨', '복사');
         }
 
-        // ——— 토스트 ———
         function showToast() {
-            const toast = document.getElementById('toast');
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 2500);
+            const t = document.getElementById('toast');
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 2500);
         }
 
-        // ——— 메인 생성 함수 (5게임) ———
         function generateNumbers() {
             const btn = document.getElementById('generateBtn');
             btn.disabled = true;
-            btn.textContent = '🎲 추첨 중...';
-
+            btn.innerHTML = '🎲 추첨 중...';
             setTimeout(() => {
                 const games = Array.from({ length: GAMES_PER_ROUND }, generateLottoNumbers);
                 roundCount++;
                 history.unshift(games);
                 if (history.length > 10) history.pop();
-
                 renderMainGames(games);
                 updateStats();
                 addHistoryRound(games, roundCount);
-
                 btn.disabled = false;
-                btn.innerHTML = '<span class="btn-icon">✨</span> 5게임 추천받기';
+                btn.innerHTML = '<span>✨</span> 5게임 추천받기';
             }, 600);
         }
 
-        // ——— 초기화 ———
         function clearAll() {
-            roundCount = 0;
-            history = [];
+            roundCount = 0; history = [];
             document.getElementById('gamesGrid').style.display = 'none';
             document.getElementById('gamesGrid').innerHTML = '';
             document.getElementById('placeholder').style.display = 'flex';
@@ -1061,11 +1176,9 @@
             document.getElementById('statAvg').textContent = '—';
         }
 
-        // ——— 키보드 단축키 (Space/Enter) ———
         document.addEventListener('keydown', (e) => {
             if ((e.code === 'Space' || e.code === 'Enter') && !e.target.closest('button') && !e.target.closest('input')) {
-                e.preventDefault();
-                generateNumbers();
+                e.preventDefault(); generateNumbers();
             }
         });
     </script>
