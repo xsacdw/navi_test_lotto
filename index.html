@@ -1053,6 +1053,52 @@
             color: #FF6B8A;
         }
 
+        /* ===== Disqus 댓글 ===== */
+        .disqus-section {
+            width: 100%;
+        }
+
+        .disqus-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .disqus-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            transition: color 0.3s;
+        }
+
+        .disqus-count-badge {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: var(--stat-bg);
+            border: 1px solid var(--stat-border);
+            border-radius: 999px;
+            padding: 0.15rem 0.6rem;
+            transition: all 0.3s;
+        }
+
+        .disqus-wrap {
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 28px;
+            padding: 2rem 1.75rem;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 0 1px var(--card-inset) inset, var(--card-shadow);
+            transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
+        }
+
+        /* Disqus iframe 다크모드 대응 */
+        #disqus_thread iframe {
+            color-scheme: normal;
+        }
+
         /* ===== 반응형 ===== */
         @media (max-width: 540px) {
             .ball {
@@ -1220,6 +1266,17 @@
                         ✉️ 문의 보내기
                     </button>
                 </form>
+            </div>
+        </div>
+
+        <!-- Disqus 댓글 -->
+        <div class="disqus-section">
+            <div class="disqus-header">
+                <div class="disqus-title">💬 댓글</div>
+                <span class="disqus-count-badge" id="disqusCountBadge">댓글 로딩 중...</span>
+            </div>
+            <div class="disqus-wrap">
+                <div id="disqus_thread"></div>
             </div>
         </div>
 
@@ -1516,7 +1573,26 @@
                 resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
         });
+
+        /* ──────────────────────────────
+           Disqus embed
+        ────────────────────────────── */
+        var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = 'lucky-lotto-main';
+        };
+        (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://navi-1-1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
     </script>
+
+    <!-- Disqus count -->
+    <script id="dsq-count-scr" src="//navi-1-1.disqus.com/count.js" async></script>
+
+    <noscript>댓글을 보려면 JavaScript를 활성화해주세요.</noscript>
 </body>
 
 </html>
