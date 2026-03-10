@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>서비스 소개 | 럭키 로또 번호 추천</title>
+    <meta name="description" content="럭키 로또는 클릭 한 번으로 5게임의 로또 번호를 추천받는 무료 서비스입니다. 한국 로또 6/45 기반으로 완전 무작위 번호를 생성합니다." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://navi-test-lotto.pages.dev/about.html" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="서비스 소개 | 럭키 로또 번호 추천" />
+    <meta property="og:description" content="클릭 한 번으로 5게임의 행운의 로또 번호를 추천받으세요!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://navi-test-lotto.pages.dev/about.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #0D0B1F;
+            color: #F0E6FF;
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFD700, #A855F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #9B8EC4;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #F0E6FF;
+        }
+
+        .page-badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #A855F7;
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px solid rgba(168, 85, 247, 0.25);
+            border-radius: 999px;
+            padding: 0.3rem 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #FFD700, #FF69B4, #A855F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .lead {
+            font-size: 1.05rem;
+            color: #C4B5E8;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #FFD700;
+            margin: 2.5rem 0 0.75rem;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #C4B5E8;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #C4B5E8;
+            margin-bottom: 0.4rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 1.25rem;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #F0E6FF;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-desc {
+            font-size: 0.82rem;
+            color: #9B8EC4;
+            line-height: 1.6;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-q {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #F0E6FF;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-a {
+            font-size: 0.88rem;
+            color: #9B8EC4;
+            line-height: 1.7;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+        }
+
+        .cta h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 0.9rem 2.5rem;
+            background: linear-gradient(135deg, #FFD700, #FF8C42, #FF4B6E);
+            color: #1A0A00;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 12px;
+            text-decoration: none;
+        }
+
+        .lotto-info {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .lotto-info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .lotto-info th,
+        .lotto-info td {
+            padding: 0.6rem 0.75rem;
+            text-align: left;
+            font-size: 0.88rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .lotto-info th {
+            color: #FFD700;
+            font-weight: 600;
+        }
+
+        .lotto-info td {
+            color: #C4B5E8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.8rem;
+            color: #6B5B9A;
+        }
+
+        footer a {
+            color: #9B8EC4;
+            text-decoration: none;
+        }
+
+        @media (max-width: 540px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a class="logo" href="/">🍀 럭키 로또</a>
+            <a href="/">← 홈으로 이동</a>
+        </nav>
+
+        <div class="page-badge">✨ About Service</div>
+        <h1>럭키 로또 번호 추천<br />서비스 소개</h1>
+        <p class="lead">
+            버튼 한 번으로 5게임의 로또 번호를 즉시 추천받으세요.<br />
+            순수 자바스크립트로 구현된 완전 무작위 번호 생성기입니다.
+        </p>
+
+        <h2>🎯 서비스 특징</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🎱</div>
+                <div class="feature-title">5게임 동시 추천</div>
+                <div class="feature-desc">클릭 한 번에 G1~G5까지 5세트의 번호를 한눈에 확인할 수 있습니다.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">번호대별 색상 구분</div>
+                <div class="feature-desc">1~10(빨강), 11~20(주황), 21~30(노랑), 31~40(민트), 41~45(보라)로 직관적 구분합니다.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌙</div>
+                <div class="feature-title">다크/라이트 모드</div>
+                <div class="feature-desc">눈 편한 다크 모드와 깔끔한 라이트 모드를 자유롭게 전환할 수 있습니다.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <div class="feature-title">번호 복사 기능</div>
+                <div class="feature-desc">게임별 또는 전체 회차를 클립보드에 바로 복사해 사용할 수 있습니다.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">추천 이력 관리</div>
+                <div class="feature-desc">최근 10회차의 추천 이력을 회차별로 확인하고 비교할 수 있습니다.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <div class="feature-title">댓글로 소통</div>
+                <div class="feature-desc">Disqus 댓글로 다른 이용자들과 번호 전략을 공유하고 소통하세요.</div>
+            </div>
+        </div>
+
+        <h2>📖 한국 로또 6/45 기본 정보</h2>
+        <p>한국 로또 6/45는 매주 토요일 오후 8시 45분에 추첨하는 국가 복권입니다. 1부터 45까지의 숫자 중 6개를 선택하는 방식으로, 아래의 당첨 구조를 갖습니다.</p>
+        <div class="lotto-info">
+            <table>
+                <thead>
+                    <tr>
+                        <th>등급</th>
+                        <th>조건</th>
+                        <th>당첨 확률</th>
+                        <th>상금</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1등</td>
+                        <td>6개 번호 모두 일치</td>
+                        <td>1 / 8,145,060</td>
+                        <td>총 당첨금의 75% ÷ 당첨자 수</td>
+                    </tr>
+                    <tr>
+                        <td>2등</td>
+                        <td>5개 + 보너스 번호 일치</td>
+                        <td>1 / 1,357,510</td>
+                        <td>총 당첨금의 12.5% ÷ 당첨자 수</td>
+                    </tr>
+                    <tr>
+                        <td>3등</td>
+                        <td>5개 번호 일치</td>
+                        <td>1 / 35,724</td>
+                        <td>총 당첨금의 12.5% ÷ 당첨자 수</td>
+                    </tr>
+                    <tr>
+                        <td>4등</td>
+                        <td>4개 번호 일치</td>
+                        <td>1 / 733</td>
+                        <td>고정 5만원</td>
+                    </tr>
+                    <tr>
+                        <td>5등</td>
+                        <td>3개 번호 일치</td>
+                        <td>1 / 45</td>
+                        <td>고정 5천원</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>💡 로또 번호 선택 방법</h2>
+        <p>로또 당첨에 정해진 필승 전략은 없습니다. 모든 번호 조합의 당첨 확률은 수학적으로 동일합니다. 그러나 많은 이용자들이 다음과 같은 방법을 활용합니다.</p>
+        <ul>
+            <li><strong>자동 번호 선택 (QR)</strong>: 판매점 또는 동행복권 앱에서 자동으로 무작위 선택</li>
+            <li><strong>수동 번호 선택</strong>: 생일, 기념일 등 의미 있는 날짜 활용</li>
+            <li><strong>번호 생성기 활용</strong>: 본 서비스와 같은 무작위 번호 생성기 사용</li>
+        </ul>
+
+        <h2>❓ 자주 묻는 질문 (FAQ)</h2>
+        <div class="faq-item">
+            <div class="faq-q">Q. 이 서비스의 번호는 당첨 확률이 더 높나요?</div>
+            <div class="faq-a">A. 아닙니다. 본 서비스는 순수한 무작위 알고리즘(Math.random)을 사용하며, 모든 번호 조합의 당첨 확률은 수학적으로 동일한
+                1/8,145,060입니다. 과거 당첨 번호 분석이나 통계적 예측은 사용되지 않습니다.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q. 무료로 사용할 수 있나요?</div>
+            <div class="faq-a">A. 네, 본 서비스는 완전 무료입니다. 회원가입 없이 즉시 이용 가능합니다.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q. 추천 번호를 저장할 수 있나요?</div>
+            <div class="faq-a">A. 화면의 복사 버튼을 통해 번호를 클립보드에 복사할 수 있습니다. 또한 같은 브라우저 세션 내에서는 최근 10회차의 추천 이력을 하단에서 확인할 수
+                있습니다.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q. 한 번에 몇 게임을 추천받을 수 있나요?</div>
+            <div class="faq-a">A. 버튼 한 번 클릭으로 5게임(G1~G5)을 동시에 추천받습니다. 게임별 개별 복사 및 전체 회차 일괄 복사가 가능합니다.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q. 모바일에서도 사용 가능한가요?</div>
+            <div class="faq-a">A. 네, 반응형 디자인으로 스마트폰, 태블릿, PC 모든 기기에서 최적화된 화면으로 이용 가능합니다.</div>
+        </div>
+
+        <div class="cta">
+            <h3>지금 바로 행운의 번호를 추천받으세요!</h3>
+            <a class="cta-btn" href="/">✨ 번호 추천받기</a>
+        </div>
+
+        <footer>
+            <p><a href="/">홈</a> · 소개 · <a href="/terms.html">이용약관</a> · <a href="/privacy.html">개인정보처리방침</a></p>
+            <p style="margin-top:0.5rem;">© 2025 럭키 로또 번호 추천. All rights reserved.</p>
+            <p style="margin-top:0.3rem;">이 서비스는 순수 오락 목적입니다. 도박 중독 예방 상담: ☎ 1336</p>
+        </footer>
+    </div>
+</body>
+
+</html>
